@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nacionalidade</title>
+ 
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <label for="nac1">Qual seu país de origem:</label>
+    <input type="text" id="nac1" placeholder="Digite seu país">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var nacc = document.getElementById('nac1');
+            var res = document.getElementById('res');
+            var n = (nacc.value)
+            res.innerHTML = `Nascido em ${n}. <br> `;
+            if (n === 'Brasil') {
+                res.innerHTML += 'Você é BRASILEIRO!';
+            } else {
+                res.innerHTML += 'Você é ESTRANGEIRO!';
+            }
+        }
+    </script>
+</body>
+</html>
